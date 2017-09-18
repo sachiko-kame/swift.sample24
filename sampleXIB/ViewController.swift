@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var viewsample1:sampleView
+        viewsample1 = Bundle.main.loadNibNamed("sampleView", owner: self, options: nil)!.first! as! sampleView
+        viewsample1.bottomlabel.text = "下"
+        
+        self.view.addSubview(viewsample1)
+        
     }
 
     override func didReceiveMemoryWarning() {
