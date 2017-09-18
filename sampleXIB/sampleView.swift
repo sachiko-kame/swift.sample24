@@ -9,6 +9,8 @@
 import UIKit
 
 class sampleView: UIView {
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var bottomlabel: UILabel!
 
     
     // Only override draw() if you perform custom drawing.
@@ -19,6 +21,13 @@ class sampleView: UIView {
         
         self.frame.size.height = selfheight
         self.frame.size.width = selfwidth
+        
+        
+        let superScreen:CGRect = (self.window?.screen.bounds)!
+        
+        self.frame.origin.x = (superScreen.width/2) - (selfwidth/2)
+        self.frame.origin.y = (superScreen.height/2) - (selfheight/2)
+
     }
     
 
